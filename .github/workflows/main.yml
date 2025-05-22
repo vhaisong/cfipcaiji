@@ -35,7 +35,9 @@ jobs:
         git config --global user.email "${{ vars.COMMIT_EMAIL }}"
         git config --global user.name "${{ vars.COMMIT_NAME }}"
         if [ -n "$(git status --porcelain)" ]; then
-          git add ip.txt
+          git add ip1.txt
+          git add ip2.txt
+          git add ip3.txt
           git commit -m "Automatic update"
           git push
         else
